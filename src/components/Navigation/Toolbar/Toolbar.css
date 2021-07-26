@@ -1,0 +1,4 @@
+div.menu {
+  display: flex;
+  flex-direction: row-reverse;
+}

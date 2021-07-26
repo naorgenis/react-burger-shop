@@ -1,0 +1,11 @@
+.BuildControls {
+  width: 100%;
+  height: 288px;
+  background-color: dodgerblue;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  box-shadow: 0 2px 1px gainsboro;
+  margin: auto;
+  padding: 10px 30% 10% 30%;
+}
