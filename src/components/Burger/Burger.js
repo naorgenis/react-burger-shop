@@ -11,7 +11,7 @@ function Burger(props) {
     })
     .flat(Infinity);
   if (transformIngredient.length === 0)
-    transformIngredient = <p>Please start adding ingredient</p>;
+    transformIngredient = <p>Please start adding ingredient!</p>;
   return (
     <div className="Burger">
       <BurgerIngredient type="bread-top" />
