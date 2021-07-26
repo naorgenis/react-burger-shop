@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 
 function Checkout(props) {
   const ingredient = useSelector((state) => state.ing);
-  const totalPrice = useSelector((state) => state.totalPrice);
+  //const totalPrice = useSelector((state) => state.totalPrice);
 
   const onCancelHandler = () => {
     props.history.goBack();
@@ -15,18 +15,18 @@ function Checkout(props) {
   const onContinueHandler = () => {
     props.history.replace("/checkout/contact-data");
 
-    const orderData = {
-      ingredient: ingredient,
-      totalPrice: totalPrice,
-      customer: {
-        name: "Naor",
-        address: {
-          town: "Tel aviv",
-          street: "dizi",
-        },
-        phone: "0545123456",
-      },
-    };
+    // const orderData = {
+    //   ingredient: ingredient,
+    //   totalPrice: totalPrice,
+    //   customer: {
+    //     name: "Naor",
+    //     address: {
+    //       town: "Tel aviv",
+    //       street: "dizi",
+    //     },
+    //     phone: "0545123456",
+    //   },
+    // };
   };
 
   return (

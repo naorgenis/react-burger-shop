@@ -7,11 +7,11 @@ function ContactData(props) {
   const ingredient = useSelector((state) => state.ing);
   const totalPrice = useSelector((state) => state.totalPrice);
   const [isLoading, setIsLoading] = useState(false);
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    address: { city: "", street: "" },
-  });
+  // const [userData, setUserData] = useState({
+  //   name: "",
+  //   email: "",
+  //   address: { city: "", street: "" },
+  // });
 
   const orderHandler = (e) => {
     e.preventDefault();
@@ -54,7 +54,7 @@ function ContactData(props) {
           <input type="text" name="street" placeholder="insert your street" />
           <button
             type="button"
-            class="btn btn-info"
+            className="btn btn-info"
             onClick={(e) => orderHandler(e)}
           >
             Order

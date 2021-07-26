@@ -1,5 +1,4 @@
 import React from "react";
-import OrderSummary from "../../Burger/OrderSummary/OrderSummary";
 import Backdrop from "../backdrop/Backdrop";
 import "./Modal.css";
 
