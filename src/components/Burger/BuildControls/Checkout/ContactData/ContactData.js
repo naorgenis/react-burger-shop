@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Spinner from "../../../../UI/Spinner/Spinner";
 import axios from "../../../../../axios-order";
+import Input from "../../../../UI/Input/Input";
+import "./ContactData.css";
 
 function ContactData(props) {
   const ingredient = useSelector((state) => state.ing);
@@ -28,6 +30,7 @@ function ContactData(props) {
         phone: "0545123456",
       },
     };
+
     axios
       .post("/orders.json", orderData)
       .then((response) => {
@@ -42,16 +45,18 @@ function ContactData(props) {
   };
 
   return (
-    <div>
+    <div className="ContactData">
       <h4> Enter your contact data</h4>
       {isLoading ? (
         <Spinner />
       ) : (
         <form>
-          <input type="text" name="Name" placeholder="insert your name" />
-          <input type="email" name="email" placeholder="insert your email" />
-          <input type="text" name="city" placeholder="insert your city" />
-          <input type="text" name="street" placeholder="insert your street" />
+          <div className="InputDiv">
+            <Input type={"text"} text={"name"} />
+            <Input type={"email"} text={"email"} />
+            <Input type={"text"} text={"city"} />
+            <Input type={"text"} text={"street"} />
+          </div>
           <button
             type="button"
             className="btn btn-info"

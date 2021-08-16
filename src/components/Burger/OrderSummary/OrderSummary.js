@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./OrderSummary.css";
 
 function OrderSummary(props) {
@@ -11,8 +11,7 @@ function OrderSummary(props) {
       );
     }
   });
-
-  console.log(transformIngredient);
+  console.log("orderSummary");
 
   return (
     <div className="OrderSummary">

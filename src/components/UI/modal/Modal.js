@@ -6,16 +6,7 @@ function Modal(props) {
   return (
     <>
       <Backdrop modal={props.modal} />
-      <div className="Modal">
-        {props.children}
-        {/* <OrderSummary
-          ingredient={props.ingredient}
-          totalPrice={props.totalPrice}
-          modal={props.modal}
-          order={props.order}
-        /> */}
-        <div></div>
-      </div>
+      <div className="Modal">{props.children}</div>
     </>
   );
 }

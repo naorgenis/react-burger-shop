@@ -1,0 +1,15 @@
+.input {
+  margin: 10px;
+  display: flex;
+  max-width: 100%;
+  text-align: left;
+  justify-content: center;
+}
+
+.label {
+  margin-right: 20px;
+}
+
+.inputTag {
+  text-align: left;
+}

@@ -14,15 +14,26 @@ function Orders(props) {
           fetchData.push({ ...response.data[key], id: key });
         }
         setOrders(fetchData);
-        console.log(orders);
+        console.log(fetchData);
       })
       .catch((error) => console.log(error));
   }, []);
 
+  const onDeleteOrder = (id) => {
+    console.log("delete");
+    axios
+      .delete(`/orders/${id}.json`)
+      .then((response) => {
+        const updateOrder = orders.filter((order) => order.id !== id);
+        setOrders(updateOrder);
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       {orders.map((order) => (
-        <Order />
+        <Order key={order.id} orderData={order} onDeleteOrder={onDeleteOrder} />
       ))}
     </div>
   );
